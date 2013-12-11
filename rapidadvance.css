@@ -1,0 +1,27 @@
+.rapidadvance-div{
+    position:static;
+    top:0px;
+    left:0px;
+}
+
+
+.rapidadvance-ul{
+    background:white;
+    border:1px solid rgb(194, 194, 194);
+    margin:5px 0px 0px 0px;
+    padding:0px;
+    max-height:300px;
+    overflow-y:scroll;
+}
+
+.rapidadvance-li{
+    height:30px;
+    line-height:30px;
+    display:block;
+    cursor:pointer;
+    font-family:"Lucida Grande", "segoe UI", "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+}
+
+.rapidadvance-selected{
+    background:rgba(137, 235, 255, 0.49);
+}
