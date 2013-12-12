@@ -27,6 +27,7 @@ RapidAdvanceJSはAngularJS用のオートコンプリートライブラリです
 ``item``は以下のようなオブジェクトもしくは``String``です。  
 ``rapidadvance-selected``のコールバックで呼び出されるときは常にオブジェクトです。(``String``で値を渡した場合でも)  
 ``show``を指定しなかった場合,``show``の内容は``key``と等しくなります。  
+
 	var item = {
 		key: 'Array or String',	/*検索に使う単語を指定します。StringかArrayで指定します。*/
 		show: 'Show on List',	/*リストに表示される文字列です。Stringで指定します。*/
