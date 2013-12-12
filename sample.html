@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="angular.min.js"></script>
+    <script src="rapidadvance.js"></script>
+    <link rel="stylesheet" href="rapidadvance.css" />
+    <script>
+        function sample($scope){
+            $scope.items = [
+                {key:['ごりら','ゴリラ','Gorilla'], show:'ゴリラ(Gorilla)', value:{binomial:'Gorilla'}},
+                {key:['あしか','アシカ','Sea lion'], show:'アシカ(Sea lion)', value:{binomial:'Otariinae'}},
+                {key:['きりん','キリン','Giraffe'], show:'キリン(Giraffe)', value:{binomial:'Giraffa camelopardalis'}}
+            ];
+         
+            $scope.selected = function(item){
+                this.binomial = '学名:'+item.value.binomial;
+                this.sample3 = item.show;
+                console.log(item);
+            }   
+        }
+        angular.module('sample', ['rapidadvance'])
+    </script>
+    <style>
+        body{
+            font-family:"Lucida Grande", "segoe UI", "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+            margin:100px;
+            background:#eee;
+        }
+    </style>
+</head>
+<body ng-app="sample">
+    <div ng-controller="sample">
+        <div>ごりら/ゴリラ/Gorilla</div>
+        <div>あしか/アシカ/Sea lion</div>
+        <div>きりん/キリン/Giraffe</div>
+        <div>のどれかを入力してください</div>
+        <div>
+            <h1>デフォルト</h1>
+            <input ng-model="sample1" rapidadvance rapidadvance-items="items">
+        </div>
+        <div>
+            <h1>大文字と小文字を区別</h1>
+            <input ng-model="sample2" rapidadvance rapidadvance-items="items" rapidadvance-case-insentive="false">
+        </div>
+        <div>
+            <h1>コールバックを使用</h1>
+            <input ng-model="sample3" rapidadvance rapidadvance-items="items" rapidadvance-selected="selected(item)">
+            <div>{{binomial}}</div>
+        </div>
+    </div>
+</body>
+</html>

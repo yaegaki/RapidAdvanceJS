@@ -1,6 +1,8 @@
 RapidAdvanceJS
 ======================
 RapidAdvanceJSはAngularJS用のオートコンプリートライブラリです。  
+[サンプル](http://yysk.jp/RapidAdvance/ "サンプル")  
+
 
 使い方
 ------
