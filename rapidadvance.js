@@ -10,6 +10,7 @@ app.directive("rapidadvance", function($compile, $location, $anchorScroll){
             }
             
             
+            
             var _this = (ra[attr['ngModel']] || (ra[attr['ngModel']] = {}));
             
             if(attr['rapidadvanceCaseInsentive'] == undefined){
